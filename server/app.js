@@ -5,11 +5,25 @@ const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const Product = require("./models/productModel");
-const compression = require("compression");
+const helmet = require("helmet");
 
 const app = express();
 const router = express.Router();
 
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        imgSrc: ["'self'", "data:", "https://your-allowed-image-source.com"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        connectSrc: ["'self'", "https://your-api-endpoint.com"],
+      },
+    },
+  })
+);
 // app.use(express.static(path.join(__dirname, "../client/build")));
 // app.use(compression());
 
