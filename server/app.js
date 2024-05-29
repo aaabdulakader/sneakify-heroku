@@ -15,11 +15,11 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        imgSrc: ["'self'", "data:", "https://your-allowed-image-source.com"],
+        imgSrc: ["'self'", "data:", "https://nike.com"],
         styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
         fontSrc: ["'self'", "https://fonts.gstatic.com"],
         scriptSrc: ["'self'", "'unsafe-inline'"],
-        connectSrc: ["'self'", "https://your-api-endpoint.com"],
+        connectSrc: ["'self'", "https://nike.com"],
       },
     },
   })
