@@ -254,7 +254,6 @@ exports.getAllUserOrders = (Model) => {
 
 exports.deleteUserCart = (Model) => {
   return catchAsync(async (req, res, next) => {
-
     // delete the cart document that hast the user's id in the user field
     await Model.deleteOne({ user: req.params.id });
 

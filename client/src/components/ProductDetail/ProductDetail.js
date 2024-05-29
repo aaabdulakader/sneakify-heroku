@@ -80,6 +80,8 @@ function ProductDetail() {
 
   let productSlug = window.location.pathname.split("/")[2];
 
+  console.log(productSlug);
+
   useEffect(() => {
     if (!product) {
       const serverLink = `/products/slug/${productSlug}`;
