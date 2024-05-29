@@ -57,6 +57,7 @@ function Product({ product, favorite }) {
         " scale_up_center"
       }
       onClick={(e) => {
+        console.log(product.slug);
         handleProductClick(product.slug, e.target.tagName);
       }}
       {...(favorite && { style: { paddingBottom: "20px", width: "350px" } })}
