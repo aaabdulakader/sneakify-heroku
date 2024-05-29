@@ -1,0 +1,91 @@
+/* Signup component styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: fit-content;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.nameContainer {
+  display: flex;
+  gap: 10px;
+}
+.inputContainer {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+.input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid #dadada;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  box-shadow: inset 0 0 2px rgb(0, 0, 0);
+}
+
+.passwordInput {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.submitButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.submitButton:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+.inputLabel {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+input.error {
+  border: 1px solid red;
+}

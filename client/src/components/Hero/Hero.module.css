@@ -1,0 +1,206 @@
+/* Hero component styles */
+
+.hero {
+  height: 93vh;
+  max-width: 1200px;
+  margin: 0 auto 0;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.heroSlide {
+  display: none;
+}
+
+.heroSlide.active {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  height: 100%;
+  /* overflow-y: hidden; */
+  scale: 0.9;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+  background: 50% 55% / cover;
+}
+
+.heroSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slide 0.5s ease-in-out;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: fit-content;
+  position: absolute;
+  top: 20%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: left;
+}
+
+.heroArrows {
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+.heroDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 100%;
+}
+.heroDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 5;
+}
+
+.heroDot.active {
+  background-color: #333;
+  width: 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.heroArrow {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.heroArrow:hover {
+  opacity: 0.5;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d0c0c;
+  font-family: "Poppins", sans-serif;
+}
+
+.shopBtn {
+  padding: 10px 20px;
+  margin-top: 5rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shopBtn:hover {
+  background-color: #333;
+}
+
+/* animations */
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .heroText {
+    width: 50%;
+  }
+
+  .heroSlide img {
+    scale: 1.2;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .heroText {
+    width: 80%;
+    left: 50%;
+  }
+
+  .heroSlide img {
+    height: fit-content;
+  }
+
+  .heroArrows {
+    width: fit-content;
+    left: 20%;
+  }
+
+  .heroArrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .title {
+    font-size: 2rem;
+  }
+  .shopBtn {
+    margin-top: 2rem;
+  }
+
+  .heroSlide img {
+    object-fit: contain;
+    margin-top: -4rem;
+    width: 100%;
+    scale: 1.1;
+    height: 100%;
+  }
+}
+
+/* 548px */
+
+@media screen and (max-width: 548px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .heroText {
+    width: 90%;
+  }
+}

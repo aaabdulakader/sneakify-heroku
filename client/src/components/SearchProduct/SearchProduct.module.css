@@ -1,0 +1,56 @@
+/* SearchProduct component styles */
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 250px;
+  height: 300px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bebbbb;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  transition: all 0.3s ease;
+}
+
+.productTitle,
+.subTitle,
+.price {
+  padding-left: 10px;
+}
+
+.productCard:hover,
+.productCard:hover .img {
+  scale: 1.05;
+}
+
+@media screen and (max-width: 600px) {
+  .productCard {
+    width: 100%;
+  }
+
+  .productTitle {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .subTitle {
+    font-size: 14px;
+    color: grey;
+  }
+  .price {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

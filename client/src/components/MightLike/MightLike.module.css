@@ -1,0 +1,43 @@
+/* MightLike component styles */
+
+.mightLike {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: fit-content;
+  gap: 20px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.mightLikeTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.mightLikeProducts {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.mightLikeProducts > div {
+  min-width: 400px;
+  /* height: 400px; */
+}
+
+@media screen and (max-width: 1024px) {
+  .mightLike {
+    display: none;
+    /* margin: 40px 20px;
+    max-width: 100vw; */
+  }
+}
+@media screen and (max-width: 685px) {
+  .mightLike {
+  }
+}

@@ -1,0 +1,103 @@
+/* UserInfo component styles */
+.userInfo {
+  max-width: 80%;
+  width: 100%;
+  height: 100vh;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  padding: 20px 0 0 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 20px;
+}
+.formGroup {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: inset 0 0 0 1px rgba(86, 85, 85, 0.578);
+  background-color: #f0f0f0;
+}
+.label {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  color: #777;
+}
+.input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px rgba(86, 85, 85, 0.578);
+  background-color: #fff;
+}
+.input:hover {
+  box-shadow: inset 0 0 0 2px rgba(86, 85, 85, 0.578);
+}
+.subTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.submitBtn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.submitBtn:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.578);
+}
+
+@media screen and (max-width: 700px) {
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .form {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .formGroup {
+    flex-direction: column;
+  }
+  .submitBtn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 530px) {
+  .title {
+    padding: 20px 0 0 10px;
+    font-size: 1.2rem;
+  }
+  .subTitle {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

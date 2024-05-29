@@ -1,0 +1,495 @@
+/* ProductDetail component styles */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  animation: slide 0.5s forwards;
+}
+.productDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+  padding: 20px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  transition: all 0.3s ease;
+}
+.productDetail.added {
+  opacity: 0.2;
+}
+
+.productDetailInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  width: 60%;
+  text-align: start;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.productDetailImage {
+  width: 100%;
+  max-width: 100%;
+  height: 60%;
+  max-height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 20px;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.productDetailImage:hover {
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #fff;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-align: center;
+}
+
+.carouselImage {
+  max-width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: fill;
+}
+
+.carouselImage.active {
+  border: 2px solid #4b4949;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.carouselImage:hover {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+/* section selections */
+
+.productSelections {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-bottom: 20px;
+  gap: 30px;
+  width: 40%;
+  margin-top: 7rem;
+  text-align: start;
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.productSelectionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sizes,
+.colors {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 2fr));
+  margin-top: 20px;
+}
+
+.size {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.size:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.size.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdownArrow.rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s ease both;
+}
+
+.color {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
+
+.color.active {
+  border: 2px solid #000;
+  opacity: 0.6;
+}
+.color.active::before {
+  content: "X";
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.productSelectionsColors,
+.productSelectionsSizes {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #d6cfcf4f;
+}
+
+.productSelectionsFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  margin-top: 5rem;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+}
+.quantity {
+  height: 100%;
+}
+
+.quantityLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 10px; */
+  width: 100px;
+  height: 100%;
+  padding: 5px 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+.quantityInput {
+  align-items: center;
+  text-align: center;
+  width: 25px;
+  padding: 10px 5px;
+  border: none;
+  /* border-radius: 0; */
+  background-color: transparent;
+  outline: none;
+}
+
+/* hide arrows */
+.quantityInput::-webkit-inner-spin-button,
+.quantityInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantityInput[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantityIcon {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+  cursor: pointer;
+}
+
+.addToCartButton {
+  height: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.heartIcon {
+  width: 45px;
+  height: 45px;
+  fill: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.heartIcon.favoriteIcon,
+.heartIcon:hover {
+  fill: gold;
+}
+
+.addToCartButton:hover,
+.heartIcon:hover {
+  scale: 1.1;
+}
+
+/* added to cart pop up component */
+.addedToCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 350px;
+  height: auto;
+  position: fixed;
+  top: 65px;
+  right: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  z-index: 100;
+  animation: slide 0.5s forwards;
+}
+.addedToCartMessage {
+  color: #1fdc25;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  align-self: center;
+}
+
+.addedToCart img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.productInfo {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+.productDetails p {
+  font-size: 0.8rem;
+  color: #777;
+}
+.productTitle {
+  font-size: 0.5rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.addedToCartButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.addedToCartButtons a {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background: #000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.addedToCartButtons a:hover {
+  background-color: transparent;
+  color: #000;
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+/* animation */
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+
+/* 740px */
+
+@media screen and (max-width: 740px) {
+  .productDetail {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+
+  .productDetailInfo {
+    width: 100%;
+  }
+
+  .productSelections {
+    width: 100%;
+  }
+
+  .productSelectionsHeader {
+    font-size: 16px;
+  }
+
+  .productSelectionsFooter {
+    margin-top: 20px;
+  }
+
+  .productSelections {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productDetail {
+    margin-block: 0;
+  }
+  .productDetailTitle {
+    font-size: 1.2rem;
+  }
+
+  .info {
+    gap: 5px;
+  }
+
+  .productSelections {
+    margin-top: 1rem;
+  }
+
+  .productSelectionsFooter {
+    width: 100%;
+  }
+
+  .addedToCart {
+    width: 90%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .productSelectionsFooter {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .addToCartButton {
+    padding: 10px 10px;
+  }
+  .quantityInput {
+    padding: 5px 5px;
+  }
+  .quantityIcon {
+    width: 15px;
+    height: 15px;
+  }
+  .quantityLabel {
+    width: 80px;
+    padding: 5px 5px;
+  }
+  .heartIcon {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+  }
+}

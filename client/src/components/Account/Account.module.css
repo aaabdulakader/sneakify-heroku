@@ -1,0 +1,127 @@
+/* Account component styles */
+/* Account.module.css */
+
+.account {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  min-width: 15%;
+  height: 100%;
+  text-align: left;
+  transition: all 0.6s ease;
+}
+.sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+  background-color: #000;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.sidebarTitle {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.tab {
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #333;
+  width: 100%;
+  padding: 0 0 0 10px;
+}
+
+.tabLink {
+  padding-block: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tabIcon,
+.userIcon {
+  min-width: 25px;
+  height: 25px;
+}
+
+.tab.active {
+  background-color: #e4e4e4;
+  box-shadow: inset 3px 0 0 #333;
+}
+
+.tab.active a {
+  color: #333;
+}
+
+.tab:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.tab a {
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  height: 100%;
+}
+
+.tab a:hover {
+  color: #424141;
+}
+
+@media screen and (max-width: 700px) {
+  .account {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+    transition: all 0.6s ease;
+    padding-block: 10px;
+  }
+
+  .sidebarList {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  .titleWrapper {
+    display: none;
+  }
+  .tab {
+    padding: 10px;
+    width: fit-content;
+  }
+  .tab.active {
+    box-shadow: none;
+    background-color: #f0f0f0;
+    font-weight: 600;
+  }
+
+  .tabIcon {
+    display: none;
+  }
+}

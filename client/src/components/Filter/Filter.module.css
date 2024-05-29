@@ -1,0 +1,133 @@
+/* Filter component styles */
+.filters {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+.header {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #000;
+  opacity: 0.7;
+}
+
+.filterHeader {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.categoryOptions,
+.priceOptions,
+.sizeOptions {
+  width: 100%;
+  text-align: left;
+}
+
+/* Category */
+.radioContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+}
+.radioContainer.active {
+  /* background-color: #000; */
+}
+.radioContainer.active .categoryLabel {
+  border-left: 4px solid #000;
+  padding-left: 5px;
+  /* margin-left: 1rem; */
+  font-size: 20px;
+}
+.categoryRadio {
+  display: none;
+}
+.categoryLabel {
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  user-select: none;
+  text-align: left;
+}
+
+/* .categoryLabel.active {
+  background-color: #000;
+  color: #fff;
+} */
+/* Sizes */
+
+.size {
+  /* margin: 0 10px 10px 0; */
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* set parent border to 5px when checked */
+.size:has(:checked) {
+  background-color: #000;
+  color: #fff;
+}
+.size:has(:checked) .sizeLabel {
+  color: #fff;
+}
+
+.sizeCheckbox {
+  display: none;
+}
+
+.sizeLabel {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 10px 20px;
+  user-select: none;
+}
+/* Price */
+.priceOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.priceLabel {
+  font-size: 18px;
+  font-weight: 500;
+}
+/* stylr the slider */
+.priceRangeSlider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 2px;
+  border-radius: 5px;
+  background: #000;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.sizeOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  max-width: 100%;
+}
+.sizeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+}

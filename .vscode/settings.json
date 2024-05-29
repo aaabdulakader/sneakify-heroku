@@ -1,0 +1,25 @@
+{
+  "emmet.preferences": {
+    "javascript": {
+      "indent": 2
+    },
+    "react": {
+      "indent": 2
+    }
+  },
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "react"
+  ],
+  "git.allowForcePush": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  }
+}

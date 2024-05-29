@@ -1,0 +1,129 @@
+.footer {
+  flex-direction: column;
+  gap: 40px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.footer,
+.footerLogo,
+.footerLinks,
+.footerTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogo {
+  flex-direction: column;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.logoIcon {
+  width: 50px;
+  height: 50px;
+  fill: white;
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: white;
+}
+
+.footerLinks {
+  gap: 10px;
+}
+
+.footerLink {
+  color: gray;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footerLink:hover {
+  color: white;
+}
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+.socialLink svg {
+  fill: gray;
+}
+
+.socialLink svg:hover {
+  fill: white;
+}
+
+.footerTextContainer {
+  gap: 10px;
+}
+
+.footerText,
+.footerText a {
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footerText a:hover {
+  color: white;
+}
+
+.devider {
+  width: 1px;
+  height: 20px;
+  background-color: gray;
+}
+
+/* responsive */
+
+@media screen and (max-width: 400px) {
+  .footer {
+    padding: 20px 10px;
+  }
+  .footerLogo .logoText {
+    font-size: 16px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+  }
+
+  .footerLink {
+    font-size: 14px;
+    justify-content: flex-start;
+  }
+
+  .socialLinks {
+    margin-top: 20px;
+  }
+
+  .socialLink svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footerTextContainer {
+    flex-direction: column;
+  }
+
+  .footerText {
+    font-size: 12px;
+  }
+
+  .devider {
+    /* display: none; */
+    height: 1px;
+    width: 20%;
+  }
+}

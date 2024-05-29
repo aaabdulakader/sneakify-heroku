@@ -1,0 +1,31 @@
+/* Alert component styles */
+
+.main_alert {
+  position: absolute;
+  /* top: 2%;
+  left: 50%; */
+  transform: translateX(-50%);
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  animation: slide 0.5s forwards;
+}
+
+.main_alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.main_alert.success {
+  background-color: #2cb94d;
+  color: #e1e7e2;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

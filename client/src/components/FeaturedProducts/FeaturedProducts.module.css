@@ -1,0 +1,50 @@
+/* FeaturedProducts component styles */
+
+.featuredProducts {
+  /* margin-top: 4rem; */
+  width: 100%;
+  background-color: #eeedea;
+  padding: 40px 20px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-inline: auto;
+  /* padding: 20px; */
+  max-width: 1200px;
+}
+
+.product {
+  width: 100%;
+}
+
+.viewAllBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    gap: 40px;
+  }
+  .product {
+    width: 350px;
+  }
+}

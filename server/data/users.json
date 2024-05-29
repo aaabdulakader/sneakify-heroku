@@ -1,0 +1,92 @@
+[
+  {
+    "username": "admin1",
+    "email": "admin1@example.com",
+    "role": "admin",
+    "password": "admin123",
+    "passwordConfirm": "admin123",
+    "firstName": "Admin",
+    "lastName": "One"
+  },
+  {
+    "username": "admin2",
+    "email": "admin2@example.com",
+    "role": "admin",
+    "password": "admin456",
+    "passwordConfirm": "admin456",
+    "firstName": "Admin",
+    "lastName": "Two"
+  },
+  {
+    "username": "user1",
+    "email": "user1@example.com",
+    "role": "user",
+    "password": "user123",
+    "passwordConfirm": "user123",
+    "firstName": "User",
+    "lastName": "One"
+  },
+  {
+    "username": "user2",
+    "email": "user2@example.com",
+    "role": "user",
+    "password": "user456",
+    "passwordConfirm": "user456",
+    "firstName": "User",
+    "lastName": "Two"
+  },
+  {
+    "username": "test1",
+    "email": "test1@example.com",
+    "role": "user",
+    "password": "test123",
+    "passwordConfirm": "test123",
+    "firstName": "Test",
+    "lastName": "One"
+  },
+  {
+    "username": "test2",
+    "email": "test2@example.com",
+    "role": "user",
+    "password": "test456",
+    "passwordConfirm": "test456",
+    "firstName": "Test",
+    "lastName": "Two"
+  },
+  {
+    "username": "test3",
+    "email": "test3@example.com",
+    "role": "user",
+    "password": "test789",
+    "passwordConfirm": "test789",
+    "firstName": "Test",
+    "lastName": "Three"
+  },
+  {
+    "username": "test4",
+    "email": "test4@example.com",
+    "role": "user",
+    "password": "test101",
+    "passwordConfirm": "test101",
+    "firstName": "Test",
+    "lastName": "Four"
+  },
+  {
+    "username": "test5",
+    "email": "test5@example.com",
+    "role": "user",
+    "password": "test111",
+    "passwordConfirm": "test111",
+    "firstName": "Test",
+    "lastName": "Five"
+  },
+  {
+    "username": "test6",
+    "email": "test6@example.com",
+    "role": "user",
+    "password": "test222",
+    "passwordConfirm": "test222",
+    "firstName": "Test",
+    "lastName": "Six"
+  }
+]
