@@ -99,12 +99,12 @@ app.get("/logout", (req, res, next) => {
   });
 });
 // Fore non-existing routes or for routes that come with the wrong HTTP method
-app.all("*", (req, res, next) => {
-  res.status(404).json({
-    status: "fail",
-    message: `Can't find ${req.originalUrl} on this server!`,
-  });
-  next();
-});
+// app.all("*", (req, res, next) => {
+//   res.status(404).json({
+//     status: "fail",
+//     message: `Can't find ${req.originalUrl} on this server!`,
+//   });
+//   next();
+// });
 
 module.exports = app;
