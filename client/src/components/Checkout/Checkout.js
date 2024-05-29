@@ -94,17 +94,13 @@ function Checkout() {
 
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     const fetchCart = async () => {
-      const response = await fetch(
-        `http://localhost:9000/users/${currentUser._id}/cart`
-      );
+      const response = await fetch(`/users/${currentUser._id}/cart`);
       const data = await response.json();
       setCartItems(data.cart.items);
     };
 
     const fetchUser = async () => {
-      const response = await fetch(
-        `http://localhost:9000/users/${currentUser._id}`
-      );
+      const response = await fetch(`/users/${currentUser._id}`);
       const data = await response.json();
       setUser(data.document);
       setCurrentUser(data.document);
@@ -135,7 +131,7 @@ function Checkout() {
           });
         }
 
-        fetch(`http://localhost:9000/users/${user._id}`, {
+        fetch(`/users/${user._id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -155,7 +151,7 @@ function Checkout() {
           });
       } else {
         // add the selected address to the user's shipping addresses
-        fetch(`http://localhost:9000/users/${user._id}`, {
+        fetch(`/users/${user._id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -182,7 +178,7 @@ function Checkout() {
       tax,
     }));
 
-    fetch("http://localhost:9000/create-checkout-session", {
+    fetch("/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -210,25 +206,19 @@ function Checkout() {
   };
 
   const makeOrder = async (order) => {
-    const response = await fetch(
-      `http://localhost:9000/users/${order.user}/orders`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(order),
-      }
-    ).then((response) => response.json());
+    const response = await fetch(`/users/${order.user}/orders`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(order),
+    }).then((response) => response.json());
     console.log(response);
 
     // clear cart
-    const response2 = await fetch(
-      `http://localhost:9000/users/${order.user}/cart`,
-      {
-        method: "DELETE",
-      }
-    ).then((response) => response.json());
+    const response2 = await fetch(`/users/${order.user}/cart`, {
+      method: "DELETE",
+    }).then((response) => response.json());
   };
 
   return (

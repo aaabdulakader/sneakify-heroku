@@ -17,7 +17,7 @@ function ProductList({ gender }) {
     category: "",
   });
 
-  const link = "http://localhost:9000/products/";
+  const link = "/products/";
 
   useEffect(() => {
     fetchProducts();
@@ -61,11 +61,10 @@ function ProductList({ gender }) {
             );
           }
           if (isgender) {
-            filteredProducts = filteredProducts.filter(
-              (product) =>
-                product.subTitle.toLowerCase().includes(isgender.toLowerCase())
+            filteredProducts = filteredProducts.filter((product) =>
+              product.subTitle.toLowerCase().includes(isgender.toLowerCase())
             );
-          } 
+          }
           if (iscolor.length) {
             filteredProducts = filteredProducts.filter((product) =>
               iscolor.includes(product.color)

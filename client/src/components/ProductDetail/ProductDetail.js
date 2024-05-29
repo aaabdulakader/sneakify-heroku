@@ -63,7 +63,7 @@ function ProductDetail() {
 
   // get user
   let getUser = async () => {
-    const response = await fetch(`http://localhost:9000/users/${userId}`);
+    const response = await fetch(`/users/${userId}`);
     const data = await response.json();
     setUser(data.document);
     setFavorites(data.document.favorites);
@@ -75,14 +75,14 @@ function ProductDetail() {
 
   let link;
   if (user) {
-    link = `http://localhost:9000/users/${user._id}/cart`;
+    link = `/users/${user._id}/cart`;
   }
 
   let productSlug = window.location.pathname.split("/")[2];
 
   useEffect(() => {
     if (!product) {
-      const serverLink = `http://localhost:9000/products/slug/${productSlug}`;
+      const serverLink = `/products/slug/${productSlug}`;
       // Fetch product from server
       fetch(serverLink)
         .then((res) => res.json())
@@ -102,7 +102,7 @@ function ProductDetail() {
 
   // handle favorite
   const handleFavorite = () => {
-    const link = `http://localhost:9000/users/${userId}/favorites/${product._id}`;
+    const link = `/users/${userId}/favorites/${product._id}`;
 
     if (!user) {
       window.location.href = "/login";

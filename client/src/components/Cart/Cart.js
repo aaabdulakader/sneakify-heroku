@@ -69,7 +69,7 @@ function Cart() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   let link;
   if (user) {
-    link = `http://localhost:9000/users/${user._id}/cart`;
+    link = `/users/${user._id}/cart`;
   }
 
   // get cart items from server
@@ -165,7 +165,7 @@ function Cart() {
       tax,
     }));
 
-    fetch("http://localhost:9000/create-checkout-session", {
+    fetch("/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -196,16 +196,13 @@ function Cart() {
   const makeOrder = async (order) => {
     try {
       // Place order
-      const orderResponse = await fetch(
-        `http://localhost:9000/users/${order.user}/orders`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(order),
-        }
-      );
+      const orderResponse = await fetch(`/users/${order.user}/orders`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(order),
+      });
 
       if (!orderResponse.ok) {
         throw new Error(`Failed to place order: ${orderResponse.statusText}`);
@@ -215,12 +212,9 @@ function Cart() {
       console.log("Order Response:", orderData);
 
       // Clear cart
-      const cartResponse = await fetch(
-        `http://localhost:9000/users/${order.user}/cart`,
-        {
-          method: "DELETE",
-        }
-      );
+      const cartResponse = await fetch(`/users/${order.user}/cart`, {
+        method: "DELETE",
+      });
 
       if (!cartResponse.ok) {
         throw new Error(`Failed to clear cart: ${cartResponse.statusText}`);

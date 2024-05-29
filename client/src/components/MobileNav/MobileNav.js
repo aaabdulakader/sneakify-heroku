@@ -9,7 +9,7 @@ const MobileNav = ({ onClose, active, logout }) => {
   const navRef = useOutsideClick(onClose);
 
   const handleLogout = async () => {
-    const logOutLink = "http://localhost:9000/logout";
+    const logOutLink = "/logout";
 
     try {
       const response = await fetch(logOutLink, {

@@ -8,7 +8,7 @@ function Product({ product, favorite }) {
 
   const handleAddRemoveFavorite = (productId) => {
     const user = JSON.parse(localStorage.getItem("currentUser"));
-    const link = `http://localhost:9000/users/${user._id}/favorites/${productId}`;
+    const link = `/users/${user._id}/favorites/${productId}`;
     fetch(link, {
       method: "DELETE",
     })

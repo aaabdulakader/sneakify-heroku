@@ -70,7 +70,7 @@ function Header({ logout }) {
     setShowProfileDropdown(!showProfileDropdown);
   };
 
-  const { data, error, loading } = useFetch("http://localhost:9000/products/");
+  const { data, error, loading } = useFetch("/products/");
   const [products, setProducts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 

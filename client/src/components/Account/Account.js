@@ -87,7 +87,7 @@ const Account = () => {
 
   const [user, setUser] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:9000/users/${userId}`)
+    fetch(`/users/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data.document);
@@ -124,6 +124,5 @@ const Account = () => {
     </div>
   );
 };
-
 
 export default Account;

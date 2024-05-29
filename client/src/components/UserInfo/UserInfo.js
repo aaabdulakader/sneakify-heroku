@@ -19,7 +19,7 @@ function UserInfo({ user }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const link = "http://localhost:9000/users/";
+    const link = "/users/";
 
     fetch(link + user._id, {
       method: "PATCH",

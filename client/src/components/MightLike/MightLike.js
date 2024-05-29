@@ -7,7 +7,7 @@ import styles from "./MightLike.module.css";
 function MightLike({ cartitems }) {
   const [suggestedProducts, setSuggestedProducts] = useState([]);
   const handleSuggestedProducts = async () => {
-    const link = "http://localhost:9000/products/";
+    const link = "/products/";
     try {
       const res = await fetch(link);
       const data = await res.json();
