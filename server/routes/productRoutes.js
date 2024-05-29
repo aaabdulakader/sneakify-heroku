@@ -15,7 +15,7 @@ const router = express.Router();
 // router.route("/").post(createProduct).get(deleteProduct);
 router.route("/top/:id").get(getTopProducts);
 router.route("/").get(getAllProducts).post(createProduct);
-router.route("/:id").delete(deleteProduct).patch(updateProduct);
+router.route("/:id").delete(deleteProduct).patch(updateProduct).get(getOne);
 router.route("/slug/:slug").get(getOneSlug);
 
 module.exports = router;

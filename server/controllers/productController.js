@@ -3,7 +3,7 @@ const User = require("../models/userModel");
 const factory = require(`${__dirname}/factoryFunction`);
 
 exports.getAllProducts = factory.getAll(Product);
-// exports.getOne = factory.getOne(Product);
+exports.getOne = factory.getOne(Product);
 exports.createProduct = factory.createOne(Product);
 exports.updateProduct = factory.updateOne(Product);
 exports.deleteProduct = factory.deleteOne(Product);
