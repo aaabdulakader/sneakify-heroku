@@ -9,13 +9,25 @@ const helmet = require("helmet");
 
 const app = express();
 const router = express.Router();
-
+// add favicon
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ["'self'"],
-        imgSrc: ["'self'", "data:", "https://static.nike.com"],
+        defaultSrc: [
+          "'self'",
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://static.nike.com",
+          "https://api.stripe.com",
+          "https://js.stripe.com",
+        ],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "https://static.nike.com",
+          "https://images.unsplash.com",
+        ],
         styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
         fontSrc: ["'self'", "https://fonts.gstatic.com"],
         scriptSrc: ["'self'", "'unsafe-inline'"],
