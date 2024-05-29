@@ -24,7 +24,17 @@ app.use(
 
 // limit the amount of data that can be sent to the server
 app.use(express.json({ limit: "20kb" }));
-app.use("/", router);
+
+// app.get("/*", (req, res, next) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"), (err) => {
+//     if (err) {
+//       res.status((500).send(err));
+//     }
+//   });
+
+//   next();
+// });
+
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
 
