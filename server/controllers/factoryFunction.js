@@ -7,7 +7,7 @@ const { type } = require("os");
 exports.getOne = (Model) =>
   catchAsync(async (req, res, next) => {
     // print id and the location of the request
-    console.log(req.params.id, req.originalUrl);
+    console.log("location" + req);
     const document = await Model.findById(req.params.id);
     if (!document) {
       return next(`No ${Model.modelName} found with that ID`);
