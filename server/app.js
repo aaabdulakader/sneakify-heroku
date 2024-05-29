@@ -24,7 +24,7 @@ app.use(
 
 // limit the amount of data that can be sent to the server
 app.use(express.json({ limit: "20kb" }));
-
+app.use("/", router);
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
 
