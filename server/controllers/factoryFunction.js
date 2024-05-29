@@ -6,7 +6,7 @@ const { type } = require("os");
 
 exports.getOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    const document = await Model.findById(req.params.id);
+    const document = await Model.findById(+req.params.id);
     if (!document) {
       return next(`No ${Model.modelName} found with that ID`);
     }
