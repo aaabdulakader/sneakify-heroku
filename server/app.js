@@ -10,6 +10,7 @@ const compression = require("compression");
 const app = express();
 const router = express.Router();
 
+// app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(compression());
 
 process.env.NODE_ENV === "development" && app.use(morgan("dev"));
