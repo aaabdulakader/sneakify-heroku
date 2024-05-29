@@ -33,7 +33,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <Hero topProducts={topProducts} />
-      {/* <ShopCategory /> */}
+      <ShopCategory />
       <FeaturedProducts products={products} />
       <Newsletter />
     </div>

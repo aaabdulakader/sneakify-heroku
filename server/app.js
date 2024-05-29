@@ -14,26 +14,17 @@ app.use(compression());
 
 process.env.NODE_ENV === "development" && app.use(morgan("dev"));
 
-app.use(
-  cors({
-    origin: "http://localhost:3001",
-    // credentials: true,
-    withCredentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3001",
+//     // credentials: true,
+//     withCredentials: true,
+//   })
+// );
+app.use(cors());
 
 // limit the amount of data that can be sent to the server
 app.use(express.json({ limit: "20kb" }));
-
-// app.get("/*", (req, res, next) => {
-//   res.sendFile(path.join(__dirname, "../client/build/index.html"), (err) => {
-//     if (err) {
-//       res.status((500).send(err));
-//     }
-//   });
-
-//   next();
-// });
 
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
