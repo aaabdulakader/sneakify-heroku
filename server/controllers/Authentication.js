@@ -107,7 +107,7 @@ const sendToken = (user, statusCode, res) => {
   const cookieOptions = {
     httpOnly: true,
     expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // Example: 1 day
-    sameSite: isProduction ? "Lax" : "None",
+    sameSite: "Strict",
     secure: isProduction,
     path: "/",
   };
