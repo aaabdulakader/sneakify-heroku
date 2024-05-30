@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import loginFormStyles from "./Login.module.css";
-import jwt_decode from "jwt-decode";
+// import jwt_decode from "jwt-decode";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { GiRunningShoe } from "react-icons/gi";
+// import { GiRunningShoe } from "react-icons/gi";
 
 import { Alert } from "../index";
 

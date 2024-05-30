@@ -4,6 +4,7 @@ const useLoggedIn = () => {
 
   useEffect(() => {
     const token = document.cookie.includes("jwt");
+    console.log("token", token);
     if (token) {
       setLoggedIn(true);
     }

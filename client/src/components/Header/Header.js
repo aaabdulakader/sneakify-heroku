@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoCloseOutline } from "react-icons/io5";
-import { IoIosSearch } from "react-icons/io";
+// import { IoIosSearch } from "react-icons/io";
 import useFetch from "../../hooks/useFetch";
 
 // hooks
@@ -70,7 +70,7 @@ function Header({ logout }) {
     setShowProfileDropdown(!showProfileDropdown);
   };
 
-  const { data, error, loading } = useFetch("/api/v1/products/");
+  const { data } = useFetch("/api/v1/products/");
   const [products, setProducts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 
