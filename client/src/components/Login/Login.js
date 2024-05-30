@@ -55,19 +55,13 @@ function LoginForm({ setTokenAndUser }) {
           console.log(data.data.user);
           setTokenAndUser(data.token, data.data.user, data.tokenExpiresIn);
           // Redirect to home page
-
+          console.log(data.data.user);
           // Show success message
           setAlert({ message: data.message, type: "success" });
 
           // console.log("currentProduct", localStorage.getItem("currentProduct"));
           setTimeout(() => {
-            if (localStorage.getItem("")) {
-              window.location.href = `/products/${
-                JSON.parse(localStorage.getItem("currentProduct")).slug
-              }`;
-            } else {
-              window.location.href = "/";
-            }
+            // window.location.href = "/";
           }, 1500);
         } else {
           // Show error message
