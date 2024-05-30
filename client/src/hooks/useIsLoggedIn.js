@@ -3,7 +3,7 @@ const useLoggedIn = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    const token = document.cookie.get("jwt").split("=")[1];
+    const token = document.cookie.includes("jwt");
     console.log("token", token);
     if (token) {
       setLoggedIn(true);
