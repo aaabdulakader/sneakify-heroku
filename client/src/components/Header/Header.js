@@ -52,6 +52,7 @@ const ProfileDropdown = ({ logout, setDropdown }) => {
 function Header({ logout }) {
   // States
   const isLoggedIn = useIsLoggedIn();
+  console.log("Is Logged In", isLoggedIn);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const [searchActive, setSearchActive] = useState(false);
