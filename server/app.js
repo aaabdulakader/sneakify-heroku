@@ -48,7 +48,11 @@ process.env.NODE_ENV === "development" && app.use(morgan("dev"));
 //     withCredentials: true,
 //   })
 // );
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://sleepy-bastion-46671-9ea5a2cb4c81.herokuapp.com",
+  })
+);
 
 // limit the amount of data that can be sent to the server
 app.use(express.json({ limit: "20kb" }));
