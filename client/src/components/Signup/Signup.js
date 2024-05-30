@@ -15,7 +15,7 @@ function Signup({ setTokenAndUser }) {
   const handleSignup = (e) => {
     e.preventDefault();
 
-    const signupLink = "/users/signup";
+    const signupLink = "/api/v1/users/signup";
 
     fetch(signupLink, {
       method: "POST",

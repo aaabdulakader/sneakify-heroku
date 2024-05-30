@@ -53,8 +53,8 @@ app.use(cors());
 // limit the amount of data that can be sent to the server
 app.use(express.json({ limit: "20kb" }));
 
-app.use("/products", productRoutes);
-app.use("/users", userRoutes);
+app.use("/api/v1/products", productRoutes);
+app.use("/api/v1/users", userRoutes);
 
 app.post("/create-checkout-session", async (req, res, next) => {
   const { items } = req.body;

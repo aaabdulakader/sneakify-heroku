@@ -70,7 +70,7 @@ function Header({ logout }) {
     setShowProfileDropdown(!showProfileDropdown);
   };
 
-  const { data, error, loading } = useFetch("/products/");
+  const { data, error, loading } = useFetch("/api/v1/products/");
   const [products, setProducts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 

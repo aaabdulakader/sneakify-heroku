@@ -19,7 +19,7 @@ function UserInfo({ user }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const link = "/users/";
+    const link = "/api/v1/users/";
 
     fetch(link + user._id, {
       method: "PATCH",

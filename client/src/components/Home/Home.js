@@ -14,7 +14,7 @@ function Home() {
   const [topProducts, setTopProducts] = useState([]);
   const [products, setProducts] = useState([]);
   // get top products for hero slideshow
-  const link = "/products/top/3";
+  const link = "/api/v1/products/top/3";
 
   useEffect(() => {
     function fetchData() {
@@ -22,7 +22,7 @@ function Home() {
         .then((response) => response.json())
         .then((data) => setTopProducts(data.documents));
 
-      fetch("/products")
+      fetch("/api/v1/products")
         .then((response) => response.json())
         .then((data) => setProducts(data.documents));
     }

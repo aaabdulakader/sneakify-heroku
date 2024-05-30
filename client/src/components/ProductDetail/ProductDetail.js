@@ -63,7 +63,7 @@ function ProductDetail() {
 
   // get user
   let getUser = async () => {
-    const response = await fetch(`/users/${userId}`);
+    const response = await fetch(`/api/v1/users/${userId}`);
     const data = await response.json();
     setUser(data.document);
     setFavorites(data.document.favorites);
@@ -74,11 +74,11 @@ function ProductDetail() {
       return;
     }
     getUser();
-  }, []);
+  }, [userId]);
 
   let link;
   if (user) {
-    link = `/users/${user._id}/cart`;
+    link = `/api/v1/users/${user._id}/cart`;
   }
 
   let productSlug = window.location.pathname.split("/")[2];

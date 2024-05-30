@@ -21,7 +21,7 @@ function Orders() {
   }, []);
 
   const { data, loading, error } = useFetch(
-    userId ? `/users/${userId}/orders` : null
+    userId ? `/api/v1/users/${userId}/orders` : null
   );
 
   useEffect(() => {

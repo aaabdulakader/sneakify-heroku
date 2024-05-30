@@ -87,7 +87,7 @@ const Account = () => {
 
   const [user, setUser] = useState({});
   useEffect(() => {
-    fetch(`/users/${userId}`)
+    fetch(`/api/v1/users/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data.document);

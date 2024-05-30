@@ -69,7 +69,7 @@ function Cart() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   let link;
   if (user) {
-    link = `/users/${user._id}/cart`;
+    link = `/api/v1/users/${user._id}/cart`;
   }
 
   // get cart items from server
@@ -196,7 +196,7 @@ function Cart() {
   const makeOrder = async (order) => {
     try {
       // Place order
-      const orderResponse = await fetch(`/users/${order.user}/orders`, {
+      const orderResponse = await fetch(`/api/v1/users/${order.user}/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -212,7 +212,7 @@ function Cart() {
       console.log("Order Response:", orderData);
 
       // Clear cart
-      const cartResponse = await fetch(`/users/${order.user}/cart`, {
+      const cartResponse = await fetch(`/api/v1/users/${order.user}/cart`, {
         method: "DELETE",
       });
 

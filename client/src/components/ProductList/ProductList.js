@@ -17,7 +17,7 @@ function ProductList({ gender }) {
     category: "",
   });
 
-  const link = "/products/";
+  const link = "/api/v1/products/";
 
   useEffect(() => {
     fetchProducts();

@@ -8,7 +8,7 @@ function Product({ product, favorite }) {
 
   const handleAddRemoveFavorite = (productId) => {
     const user = JSON.parse(localStorage.getItem("currentUser"));
-    const link = `/users/${user._id}/favorites/${productId}`;
+    const link = `/api/v1/users/${user._id}/favorites/${productId}`;
     fetch(link, {
       method: "DELETE",
     })
@@ -30,7 +30,7 @@ function Product({ product, favorite }) {
 
     if (target === "path" || target === "BUTTON") return;
 
-    window.location.href = `/products/slug/${productSlug}`;
+    window.location.href = `/products/${productSlug}`;
   };
 
   // 100 to 200
