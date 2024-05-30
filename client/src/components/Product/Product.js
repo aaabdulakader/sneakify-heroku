@@ -30,7 +30,7 @@ function Product({ product, favorite }) {
 
     if (target === "path" || target === "BUTTON") return;
 
-    window.location.href = `/products/${productSlug}`;
+    window.location.href = `/products/slug/${productSlug}`;
   };
 
   // 100 to 200
