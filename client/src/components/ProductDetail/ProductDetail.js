@@ -85,7 +85,7 @@ function ProductDetail() {
 
   useEffect(() => {
     if (!product) {
-      const serverLink = `/products/slug/${productSlug}`;
+      const serverLink = `/api/v1/products/slug/${productSlug}`;
       // Fetch product from server
       fetch(serverLink)
         .then((res) => res.json())
