@@ -5,6 +5,8 @@
   "scripts": {
     "start": "node ./server/server.js",
     "start:dev": "nodemon ./server/server.js",
+    "import": "node ./server/data/importData.js --import",
+    "destroy": "node ./server/data/importData.js --delete",
     "start:prod": "node",
     "create": "node ./client/create.js",
     "delete": "node ./client/delete.js"
