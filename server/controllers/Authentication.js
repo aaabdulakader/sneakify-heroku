@@ -99,7 +99,7 @@ const createToken = (id) => {
   });
 };
 
-const sendToken = (user, statusCode, req, res) => {
+const sendToken = (user, statusCode, res) => {
   const token = createToken(user._id);
 
   const isProduction = process.env.NODE_ENV === "production";
@@ -107,9 +107,13 @@ const sendToken = (user, statusCode, req, res) => {
   const cookieOptions = {
     httpOnly: true,
     expires: new Date(
-      Date.now() + process.env.JWT_EXPIRES_IN * 24 * 60 * 60 * 1000
+      Date.now() + process.env.COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
-    secure: true,
+    secure: isProduction,
+    path: "/",
+    domain: isProduction
+      ? "https://sleepy-bastion-46671-9ea5a2cb4c81.herokuapp.com/"
+      : "",
   };
 
   res.cookie("jwt", token, cookieOptions);
