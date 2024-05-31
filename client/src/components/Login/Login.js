@@ -61,7 +61,7 @@ function LoginForm({ setTokenAndUser }) {
 
           // console.log("currentProduct", localStorage.getItem("currentProduct"));
           setTimeout(() => {
-            // window.location.href = "/";
+            window.location.href = "/";
           }, 1500);
         } else {
           // Show error message
