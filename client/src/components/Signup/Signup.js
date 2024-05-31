@@ -147,15 +147,6 @@ function Signup({ setTokenAndUser }) {
             Login
           </Link>
         </div>
-
-        {/* <div className={styles.forgotPasswordContainer}>
-        <Link
-          to="/forgotpassword"
-          className={styles.forgotPasswordLink}
-        >
-          Forgot Password?
-        </Link>
-      </div> */}
       </div>
     </div>
   );

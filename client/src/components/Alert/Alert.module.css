@@ -2,8 +2,7 @@
 
 .main_alert {
   position: absolute;
-  /* top: 2%;
-  left: 50%; */
+  top: 50px;
   transform: translateX(-50%);
   width: 400px;
   padding: 20px;
@@ -27,5 +26,14 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* responsive */
+
+@media screen and (max-width: 740px) {
+  .main_alert {
+    width: 80%;
+    transform: translateX(-50%);
   }
 }

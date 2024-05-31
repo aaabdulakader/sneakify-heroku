@@ -106,10 +106,13 @@ const sendToken = (user, statusCode, res) => {
 
   const cookieOptions = {
     httpOnly: true,
-    expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // Example: 1 day
+    expires: new Date(Date.now() + 90 * 60 * 60 * 1000), // Example: 90 days
     sameSite: "Strict",
     secure: isProduction,
     path: "/",
+    donmain: isProduction
+      ? "https://sleepy-bastion-46671-9ea5a2cb4c81.herokuapp.com/"
+      : "",
   };
 
   res.cookie("jwt", token, cookieOptions);

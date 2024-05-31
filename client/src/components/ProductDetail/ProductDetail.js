@@ -32,7 +32,6 @@ const AddedToCart = ({ product, size, color, quantity }) => {
       </div>
       <div className={styles.addedToCartButtons}>
         <Link to="/cart">View Cart</Link>
-        <Link to="/checkout">Checkout</Link>
       </div>
     </div>
   );
@@ -418,8 +417,6 @@ function ProductDetail() {
                 />
               )}
             </div>
-
-            {/*  */}
           </section>
         </div>
       )}

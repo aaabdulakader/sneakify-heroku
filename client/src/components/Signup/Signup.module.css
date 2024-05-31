@@ -89,3 +89,10 @@
 input.error {
   border: 1px solid red;
 }
+
+
+.loginLink{
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+}
