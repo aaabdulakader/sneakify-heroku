@@ -6,6 +6,7 @@ import jwt_decode from "jwt-decode";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { GiRunningShoe } from "react-icons/gi";
+import { CookiesProvider, useCookies } from "react-cookie";
 
 import { Alert } from "../index";
 
@@ -15,6 +16,7 @@ function LoginForm({ setTokenAndUser }) {
   let [email, setEmail] = useState("");
   const [showLogin, setShowLogin] = useState(true);
   const [alert, setAlert] = useState({ message: "", type: "" });
+  const [cookies, setCookie] = useCookies(["jwt"]);
 
   const handleShowPassword = () => {
     let passwordInput = document.querySelector("#password");
