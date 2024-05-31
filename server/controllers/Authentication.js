@@ -99,7 +99,7 @@ const createToken = (id) => {
   });
 };
 
-const sendToken = (user, statusCode, res) => {
+const sendToken = (user, statusCode, req, res) => {
   const token = createToken(user._id);
 
   const isProduction = process.env.NODE_ENV === "production";
@@ -111,7 +111,7 @@ const sendToken = (user, statusCode, res) => {
     ),
     secure: req.secure || req.headers["x-forwarded-proto"] === "https",
   };
-  
+
   res.cookie("jwt", token, cookieOptions);
 
   user.password = undefined;

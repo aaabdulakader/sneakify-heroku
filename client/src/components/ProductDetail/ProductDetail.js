@@ -4,16 +4,12 @@ import { Link } from "react-router-dom";
 import styles from "./ProductDetail.module.css";
 
 // icons
-import { FaRegHeart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa6";
-import { CiHeart } from "react-icons/ci";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import {
   IoIosArrowRoundForward,
   IoIosArrowRoundBack,
   IoIosArrowDown,
-  IoIosArrowUp,
 } from "react-icons/io";
 
 // pop up component after adding to cart
