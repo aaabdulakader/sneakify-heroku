@@ -38,10 +38,10 @@ function LoginForm({ setTokenAndUser }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: "testt@gmail.com",
-        password: "test123",
-        // email: email,
-        // password: password,
+        // email: "testt@gmail.com",
+        // password: "test123",
+        email: email,
+        password: password,
       }),
     })
       .then((res) => res.json())
