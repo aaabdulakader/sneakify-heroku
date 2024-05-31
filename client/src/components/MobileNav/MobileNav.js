@@ -36,62 +36,54 @@ const MobileNav = ({ onClose, active, logout }) => {
       className={styles.mobileNav}
       aria-label="Mobile Navigation"
     >
-      <ul
+      <div
         className={styles.mobileNavList}
         aria-label="Mobile Navigation List"
         onClick={onClose}
       >
-        <li>
-          <Link className={styles.mobileNavLink} to="/" aria-label="Home">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className={styles.mobileNavLink} to="/men" aria-label="Men">
-            Men
-          </Link>
-        </li>
-        <li>
-          <Link className={styles.mobileNavLink} to="/women" aria-label="Women">
-            Women
-          </Link>
-        </li>
-        <li>
-          <Link className={styles.mobileNavLink} to="/kids" aria-label="Kids">
-            Kids
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={styles.mobileNavLink}
-            to="/products"
-            aria-label="Products"
-          >
-            Products
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={styles.mobileNavLink}
-            to={isLoggedIn ? "/account/userInfo" : "/login"}
-            aria-label="Login"
-          >
-            {isLoggedIn ? "My Account" : "Login"}
-          </Link>
-        </li>
+        <Link className={styles.mobileNavLink} to="/" aria-label="Home">
+          Home
+        </Link>
+
+        <Link className={styles.mobileNavLink} to="/men" aria-label="Men">
+          Men
+        </Link>
+
+        <Link className={styles.mobileNavLink} to="/women" aria-label="Women">
+          Women
+        </Link>
+
+        <Link className={styles.mobileNavLink} to="/kids" aria-label="Kids">
+          Kids
+        </Link>
+
+        <Link
+          className={styles.mobileNavLink}
+          to="/products"
+          aria-label="Products"
+        >
+          Products
+        </Link>
+
+        <Link
+          className={styles.mobileNavLink}
+          to={isLoggedIn ? "/account/userInfo" : "/login"}
+          aria-label="Login"
+        >
+          {isLoggedIn ? "My Account" : "Login"}
+        </Link>
+
         {isLoggedIn && (
-          <li>
-            <Link
-              className={styles.mobileNavLink}
-              to="/"
-              aria-label="Logout"
-              onClick={handleLogout}
-            >
-              Logout
-            </Link>
-          </li>
+          <Link
+            className={styles.mobileNavLink}
+            to="/"
+            aria-label="Logout"
+            onClick={handleLogout}
+          >
+            Logout
+          </Link>
         )}
-      </ul>
+      </div>
     </nav>
   );
 };
