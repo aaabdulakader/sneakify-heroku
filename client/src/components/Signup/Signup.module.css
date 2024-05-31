@@ -1,4 +1,7 @@
 /* Signup component styles */
+.container ~ {
+  box-sizing: border-box;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -16,6 +19,7 @@
   gap: 10px;
   height: fit-content;
   width: 400px;
+  max-width: 100%;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -31,7 +35,9 @@
 .nameContainer {
   display: flex;
   gap: 10px;
+  width: 100%;
 }
+
 .inputContainer {
   padding-top: 10px;
   display: flex;
@@ -39,13 +45,15 @@
   gap: 2px;
   width: 100%;
 }
+
 .input {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   outline: 1px solid #dadada;
-  border: none;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
 }
 
 .input:focus {
@@ -58,6 +66,7 @@
   align-items: center;
   gap: 10px;
   position: relative;
+  width: 100%;
 }
 
 .submitButton {
@@ -74,6 +83,7 @@
   transition: all 0.3s ease;
   margin-top: 20px;
 }
+
 .submitButton:hover {
   background-color: #fff;
   color: #000;
@@ -90,9 +100,47 @@ input.error {
   border: 1px solid red;
 }
 
-
-.loginLink{
+.loginLink {
   text-align: center;
   margin-top: 1rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 440px) {
+  .signup {
+    padding: 10px;
+    width: 95%;
+    max-width: 100%;
+    /* margin: 10px; */
+  }
+
+  .formTitle {
+    font-size: 20px;
+    margin-block: 1rem;
+  }
+
+  .input {
+    padding: 8px 10px;
+  }
+
+  .submitButton {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .inputLabel {
+    font-size: 12px;
+    width: 100%;
+  }
 }
