@@ -30,7 +30,7 @@ function LoginForm({ setTokenAndUser }) {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    const loginLink = "http://localhost:9000/users/login";
+    const loginLink = "/api/v1/users/login";
 
     fetch(loginLink, {
       method: "POST",
