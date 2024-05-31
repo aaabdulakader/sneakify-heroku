@@ -40,8 +40,6 @@ function Product({ product, favorite }) {
   return (
     <motion.div
       key={product._id}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
       {...(favorite && crossClicked && { scale: 1.6 })}
       whileHover={{
         scale: 1.01,

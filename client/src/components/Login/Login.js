@@ -2,11 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import loginFormStyles from "./Login.module.css";
-import jwt_decode from "jwt-decode";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { GiRunningShoe } from "react-icons/gi";
-import { CookiesProvider, useCookies } from "react-cookie";
 
 import { Alert } from "../index";
 
@@ -16,7 +13,6 @@ function LoginForm({ setTokenAndUser }) {
   let [email, setEmail] = useState("");
   const [showLogin, setShowLogin] = useState(true);
   const [alert, setAlert] = useState({ message: "", type: "" });
-  const [cookies, setCookie] = useCookies(["jwt"]);
 
   const handleShowPassword = () => {
     let passwordInput = document.querySelector("#password");
@@ -94,11 +90,11 @@ function LoginForm({ setTokenAndUser }) {
                   type="text"
                   id="email"
                   name="email"
-                  // value="user@example.com"
                   placeholder="example@gmail.com"
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete={"on"}
                   autoFocus={true}
+                  required
                 />
               </label>
             </div>
@@ -110,11 +106,10 @@ function LoginForm({ setTokenAndUser }) {
                   type="password"
                   id="password"
                   name="password"
-                  // value="password1"
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
                   autoComplete="on"
-                  // required
+                  required
                 />
                 <div
                   className={loginFormStyles.showPassword}
