@@ -23,17 +23,6 @@ function MightLike({ cartitems }) {
   useEffect(() => {
     handleSuggestedProducts();
   }, []);
-
-  // filter out the products that are already in the cart
-  //   useEffect(() => {
-  const filterProducts = suggestedProducts.filter((product, index) => {
-    return !cartitems.some((item) => item._id === product._id);
-  });
-
-  // console.log(filterProducts);
-  //     setSuggestedProducts(filterProducts);
-  //   }, [cartitems]);
-
   return (
     <div className={styles.mightLike}>
       <h2 className={styles.mightLikeTitle}>

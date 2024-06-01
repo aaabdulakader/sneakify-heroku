@@ -8,7 +8,6 @@ exports.getOne = (Model) =>
   catchAsync(async (req, res, next) => {
     // print list of all the params in the request
     const params = Object.keys(req.params);
-    console.log("/////////////////////////////////////////" + params);
     const document = await Model.findById(req.params.id);
     if (!document) {
       return next(`No ${Model.modelName} found with that ID`);

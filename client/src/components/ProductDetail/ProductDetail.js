@@ -49,16 +49,18 @@ function ProductDetail() {
 
   let currentUser = JSON.parse(localStorage.getItem("currentUser"));
   let userId;
+
   if (currentUser) {
     userId = currentUser._id;
   }
 
+  console.log(userId);
   const [favorites, setFavorites] = useState([]);
   const [user, setUser] = useState();
 
   // get user
   let getUser = async () => {
-    const response = await fetch(`/api/v1/users/${userId}`);
+    const response = await fetch(`/api/v1/users/${currentUser._id}`);
     const data = await response.json();
     setUser(data.document);
     setFavorites(data.document.favorites);

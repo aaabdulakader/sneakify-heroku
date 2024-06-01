@@ -17,7 +17,6 @@ function SortBy() {
         className={sortByStyles.sortBy}
         area-label="Sort By"
         role="listbox"
-        onClick={() => console.log("Sort By")}
       >
         {/* No select. just the Sort By title and a wrapper for  dropdown items*/}
         <span className={sortByStyles.sortByTitle}>Sort By</span>

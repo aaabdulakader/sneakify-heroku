@@ -88,7 +88,6 @@ function Cart() {
     getCartItems();
   }, []);
 
-  //   console.log(cartitems);
   const subtotal = cartitems?.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);
@@ -183,10 +182,8 @@ function Cart() {
           payment_method: "card",
           total_amount: subtotal + subtotal * tax,
         });
-        // open a blan
+        // open a blank
         window.open(link, "_blank");
-
-        console.log(link, status);
       })
       .catch((e) => {
         console.log(e);
