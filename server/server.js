@@ -11,13 +11,13 @@ DB();
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../client/build/index.html"), (err) => {
-//     if (err) {
-//       console.log(err);
-//     }
-//   });
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"), (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+});
 
 const port = process.env.PORT;
 
