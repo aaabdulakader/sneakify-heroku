@@ -53,6 +53,7 @@ app.use(
     origin: "https://sleepy-bastion-46671-9ea5a2cb4c81.herokuapp.com",
   })
 );
+app.use(compression());
 
 // limit the amount of data that can be sent to the server
 app.use(express.json({ limit: "20kb" }));
@@ -74,7 +75,7 @@ app.post("/create-checkout-session", async (req, res, next) => {
 
     const price = prices.find((price) => price._id == item.product_id);
 
-    item.price = price.price;
+    item.price = price.price * 0.05 + price.price;
   });
 
   const line_items = items.map((item) => ({

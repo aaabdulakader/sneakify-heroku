@@ -26,7 +26,7 @@ function Orders() {
 
   useEffect(() => {
     if (data) {
-      setOrders(data.orders);
+      setOrders(data.orders.reverse());
     }
   }, [data]);
 
@@ -38,11 +38,11 @@ function Orders() {
   }
 
   // changes all the orders' status to "Completed" except the last one
-  orders.forEach((order, i) => {
-    if (i !== 0) {
-      order.status = "Completed";
-    }
-  });
+  // orders.forEach((order, i) => {
+  //   if (i !== 0) {
+  //     order.status = "Completed";
+  //   }
+  // });
 
   return (
     <div className={styles.orders}>
