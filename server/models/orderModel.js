@@ -98,6 +98,14 @@ orderSchema.pre("save", function (next) {
   next();
 });
 
+orderSchema.pre("save", async function (next) {
+  await this.model("Order").updateMany(
+    { user: this.user, _id: { $ne: this._id } },
+    { status: "Completed" }
+  );
+  next();
+});
+
 // populate the product_id field with the product details
 orderSchema.pre(/^find/, function (next) {
   this.populate({
