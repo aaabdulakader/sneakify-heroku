@@ -102,7 +102,7 @@ function ProductDetail() {
 
   // handle favorite
   const handleFavorite = () => {
-    const link = `/users/${userId}/favorites/${product._id}`;
+    const link = `/api/v1/users/${userId}/favorites/${product._id}`;
 
     if (!user) {
       window.location.href = "/login";

@@ -31,7 +31,7 @@ const {
 const router = express.Router();
 router
   .route("/")
-  .get(secure, limit("admin"), getAllUsers, testMiddleware)
+  .get(secure, limit("admin"), getAllUsers)
   .post(signUp);
 router.route("/cart").get(getAllCarts).delete(deleteAll);
 router
