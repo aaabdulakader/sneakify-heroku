@@ -111,6 +111,7 @@ function ProductDetail() {
 
     if (isFavorited) {
       request("DELETE", link).then((data) => {
+        console.log(data);
         setUser(data.documents);
       });
     } else {
