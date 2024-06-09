@@ -97,8 +97,8 @@ app.post("/create-checkout-session", async (req, res, next) => {
       allowed_countries: ["US", "CA"],
     },
 
-    success_url: `${req.headers.origin}/checkout:success`,
-    cancel_url: `${req.headers.origin}/cart:cancel`,
+    success_url: `${req.headers.origin}/cart`,
+    cancel_url: `${req.headers.origin}/cart`,
   });
 
   res.status(200).json({
