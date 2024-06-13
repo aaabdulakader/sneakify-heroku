@@ -1,6 +1,8 @@
 /* Newsletter component styles */
 .newsletter {
-  /* margin: 4rem 0; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: #f7f7f7;
   padding: 40px;
@@ -90,31 +92,30 @@
   transition: background-color 0.3s;
 }
 
-
 /* 800px */
 
 @media screen and (max-width: 800px) {
- .newsletterContainer{
+  .newsletterContainer {
     max-width: 80%;
- }
+  }
 }
 /* 550px */
 
 @media screen and (max-width: 550px) {
- .newsletterContainer{
+  .newsletterContainer {
     max-width: 95%;
     /* padding-inline: 20px; */
- }
+  }
 
   .newsletterForm {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
-.newsletterTitle {
-  font-size: 1.5rem;
-} 
+  .newsletterTitle {
+    font-size: 1.5rem;
+  }
 
-.newsletter{
-  padding: 40px 20px;
-}
+  .newsletter {
+    padding: 40px 20px;
+  }
 }
